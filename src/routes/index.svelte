@@ -3,20 +3,15 @@
 </script>
 
 <script lang="ts">
+	import Header from '$lib/header/Header.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section class="content">
-	<h1>Hello World</h1>
-</section>
+<Header />
+<h1 class="text-6xl">yeet</h1>
 
 <style lang="postcss">
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
 </style>
