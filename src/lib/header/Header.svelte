@@ -1,10 +1,9 @@
-<script lang="ts">
-	// import { page } from '$app/stores';
-	// import logo from './svelte-logo.svg';
+<script>
+	import Canvas from './Canvas.svelte';
 </script>
 
 <header class="w-full h-screen bg-header bg-center bg-no-repeat bg-cover">
-	<div id="canvas" />
+	<Canvas />
 	<nav>
 		<div class="flex justify-end p-16 text-xl">
 			<a href="#projects" class="link ml-16">Projects</a>
