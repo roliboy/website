@@ -51,6 +51,7 @@
 			.fill(null)
 			.map((shape) => makeShape());
 
+		// TODO: update when window resized
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 
@@ -76,18 +77,12 @@
 				context.translate(shape.position.x, shape.position.y);
 				context.rotate(shape.rotation);
 				context.strokeStyle = shape.color;
+				// TODO: map
+				context.globalAlpha =
+					(canvas.height - shape.position.y + shape.size) / (canvas.height + shape.size);
 				context.stroke(shape.path);
 				context.restore();
 			});
-
-			let gradient = context.createLinearGradient(0, 0, 0, canvas.height);
-			gradient.addColorStop(0, 'rgba(40, 42, 54, 0)');
-			gradient.addColorStop(0.6, 'rgba(40, 42, 54, 0.5)');
-			gradient.addColorStop(0.8, 'rgba(40, 42, 54, 0.9)');
-			gradient.addColorStop(1, 'rgba(40, 42, 54, 1)');
-
-			context.fillStyle = gradient;
-			context.fillRect(0, 0, canvas.width, canvas.height);
 
 			animationFrameId = requestAnimationFrame(drawFrame);
 		};
