@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -12,6 +13,7 @@
 
 <Header />
 <h1 class="text-6xl">yeet</h1>
+<Footer />
 
 <style lang="postcss">
 </style>
