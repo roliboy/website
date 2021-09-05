@@ -9,7 +9,8 @@ module.exports = {
 					light: '#44475a'
 				},
 				foreground: '#f8f8f2',
-				primary: '#bd93f9'
+				primary: '#bd93f9',
+				secondary: `#ff79c6`
 			},
 			fontFamily: {
 				body: ['ZCOOL KuaiLe']
