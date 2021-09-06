@@ -5,7 +5,8 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import Project from '$lib/Project.svelte';
+	import Project from '$lib/project/Project.svelte';
+	import projects from '../data/projects.json';
 </script>
 
 <svelte:head>
@@ -16,7 +17,16 @@
 <section id="projects" class="py-48 border-b-2 border-background-light">
 	<h2 class="heading ml-40">Projects</h2>
 	<div class="max-w-screen-xl mx-auto">
-		<Project />
+		{#each projects as project, index}
+			<div class="mt-24">
+				<Project {index} {...project} />
+			</div>
+		{/each}
+	</div>
+	<div class="mt-24 max-w-screen-xl mx-auto flex justify-center">
+		<a sveltekit:prefetch href="/projects" class="link-underline text-4xl"
+			>All projects<span class="pl-4 ">→</span></a
+		>
 	</div>
 </section>
 <section id="projects" class="py-48 border-b-2 border-background-light">
