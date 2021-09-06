@@ -1,44 +1,44 @@
 [
     {
         "id": 0,
-        "name": "Icarus",
+        "name": "icarus",
         "slug": "icarus",
         "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
-        "tags": ["linux"]
+        "tags": ["ctf", "arch linux"]
     },
     {
         "id": 1,
-        "name": "website",
-        "slug": "website",
-        "description": "asd",
-        "tags": ["svelte"]
+        "name": "shiba",
+        "slug": "shiba",
+        "description": "All-in-one webapp prototyping companion. A versatile and easy-to-use tool that can act as a static HTTP server, CORS proxy, REST API and more",
+        "tags": ["cli", "bash", "http", "rest"]
     },
     {
         "id": 2,
-        "name": "Icarus",
-        "slug": "icarus",
-        "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
-        "tags": ["linux"]
+        "name": "website",
+        "slug": "website",
+        "description": "Personal website created using svelte and tailwind css",
+        "tags": ["svelte", "tailwind"]
     },
     {
         "id": 3,
-        "name": "website",
-        "slug": "website",
-        "description": "asd",
-        "tags": ["svelte"]
+        "name": "archer",
+        "slug": "archer",
+        "description": "Automated arch linux install script for brainlets",
+        "tags": ["bash", "arch linux"]
     },
     {
         "id": 4,
-        "name": "Icarus",
-        "slug": "icarus",
-        "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
-        "tags": ["linux"]
+        "name": "raytracer",
+        "slug": "raytracer",
+        "description": "Simple ray tracer implemented in pure C following Peter Shirley's 'Ray Tracing in a Weekend' book, with some extra features like: realtime output, multithreaded rendering, scene loading and avx intrinsics",
+        "tags": ["c", "sdl"]
     },
     {
         "id": 5,
-        "name": "website",
-        "slug": "website",
-        "description": "asd",
-        "tags": ["svelte"]
+        "name": "ansify",
+        "slug": "ansify",
+        "description": "Image to ansi rgb escape sequence converter",
+        "tags": ["cli", "bash"]
     }
 ]
