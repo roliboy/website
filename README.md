@@ -36,3 +36,8 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## Acknowledgements
+
+- [Dracula](https://draculatheme.com/contribute) - for the color scheme
+- [Ariel Chura](https://arielchura.com/en#projects) - for project list
