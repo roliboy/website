@@ -6,9 +6,9 @@
 	<Canvas />
 	<nav>
 		<div class="flex justify-end p-16 text-xl">
-			<a href="#projects" class="link ml-16">Projects</a>
-			<a href="#about" class="link ml-16">About</a>
-			<a href="#contact" class="link ml-16">Contact</a>
+			<a href="#projects" class="link-underline ml-16">Projects</a>
+			<a href="#about" class="link-underline ml-16">About</a>
+			<a href="#contact" class="link-underline ml-16">Contact</a>
 		</div>
 	</nav>
 	<div class="p-16 absolute top-2/4 -translate-y-2/4">
@@ -18,7 +18,4 @@
 </header>
 
 <style lang="postcss">
-	.link {
-		@apply relative p-4 after:absolute after:bottom-0 after:left-0 after:right-full after:h-4 after:bg-white after:transition-all hover:text-primary hover:after:right-0 hover:after:h-1 hover:after:bg-primary;
-	}
 </style>

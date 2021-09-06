@@ -8,6 +8,14 @@
 
 @tailwind utilities;
 
+@layer utilities {
+	@variants after {
+		.-z-10 {
+			z-index: -10;
+		}
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -26,4 +34,35 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-primary;
+}
+
+.link-underline {
+	@apply relative;
+	@apply p-4;
+
+	@apply after:absolute;
+	@apply after:bottom-0 after:left-0 after:right-full after:h-4;
+	@apply after:bg-white;
+	@apply after:transition-all;
+
+	@apply hover:text-primary;
+
+	@apply hover:after:right-0 hover:after:h-1;
+	@apply hover:after:bg-primary;
+}
+
+.link-fill {
+	@apply relative;
+	@apply z-10;
+	@apply p-2;
+	@apply border-b border-primary;
+
+	@apply after:absolute;
+	@apply after:-z-10;
+	@apply after:top-0 after:left-0 after:right-full after:h-full;
+	@apply after:bg-foreground;
+	@apply after:transition-all;
+
+	@apply hover:after:right-0;
+	@apply hover:after:bg-primary;
 }
