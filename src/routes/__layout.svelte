@@ -2,7 +2,7 @@
 	import '../app.postcss';
 </script>
 
-<div class="bg-background-dark text-foreground overflow-hidden">
+<div class="bg-background-dark text-foreground">
 	<slot />
 </div>
 
