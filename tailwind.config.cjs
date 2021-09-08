@@ -13,7 +13,7 @@ module.exports = {
 				secondary: `#ff79c6`
 			},
 			fontFamily: {
-				body: ['ZCOOL KuaiLe']
+				saira: ['Saira', 'sans-serif']
 			},
 			backgroundImage: {
 				header: 'linear-gradient(rgba(40, 42, 54, 0.65), #282a36), url(/static/header.png)'
