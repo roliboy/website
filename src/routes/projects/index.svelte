@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/header/Header.svelte';
 	import projects from '../../data/projects.json';
 </script>
 
@@ -11,22 +12,18 @@
 	<title>Projects</title>
 </svelte:head>
 
-<header class="w-full half bg-header bg-center bg-no-repeat bg-cover">
-	<!-- <nav>
-		<div class="flex justify-end p-16 text-xl">
-			<a href="#projects" class="link-underline ml-16">Projects</a>
-			<a href="#about" class="link-underline ml-16">About</a>
-			<a href="#contact" class="link-underline ml-16">Contact</a>
-		</div>
-	</nav> -->
-	<div class="flex h-full items-center">
-		<div class="p-16">
-			<h1 class="text-6xl text-primary mb-4">Projects</h1>
-		</div>
-	</div>
-</header>
+<Header height="h-screen/2">
+	<!-- <div slot="canvas"><Shapes /></div> -->
+	<div slot="title">projects</div>
+	<!-- <div slot="subtitle">1337 h4x0r, ctf player and certified brainlet</div> -->
+	<!-- <div slot="links">
+		<a href="#projects" class="link-underline">Projects</a>
+		<a href="#about" class="link-underline ml-8 md:ml-16">About</a>
+		<a href="#contact" class="link-underline ml-8 md:ml-16">Contact</a>
+	</div> -->
+</Header>
 
-<div class="container px-8 mx-auto">
+<div class="container pt-40 px-8 mx-auto">
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
 		{#each projects as project}
 			<a

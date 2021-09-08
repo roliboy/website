@@ -7,13 +7,24 @@
 	import Footer from '$lib/Footer.svelte';
 	import Project from '$lib/project/Project.svelte';
 	import projects from '../data/projects.json';
+	import Shapes from '$lib/header/Shapes.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<Header />
+<Header height="h-screen">
+	<div slot="canvas"><Shapes /></div>
+	<div slot="title">roliboy</div>
+	<div slot="subtitle">1337 h4x0r, ctf player and certified brainlet</div>
+	<div slot="links">
+		<a href="#projects" class="link-underline">Projects</a>
+		<a href="#about" class="link-underline ml-8 md:ml-16">About</a>
+		<a href="#contact" class="link-underline ml-8 md:ml-16">Contact</a>
+	</div>
+</Header>
+
 <section id="projects" class="py-48 border-b-2 border-background-light">
 	<div class="container px-8 mx-auto">
 		<div class="flex justify-center md:justify-start">

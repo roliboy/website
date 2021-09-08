@@ -51,13 +51,12 @@
 			.fill(null)
 			.map((shape) => makeShape());
 
-		// TODO: update when window resized
-
 		const context = canvas.getContext('2d');
 		context.lineWidth = 2;
 
 		let animationFrameId: number;
 		const drawFrame = () => {
+			// TODO: get size from element
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 			context.clearRect(0, 0, canvas.width, canvas.height);
