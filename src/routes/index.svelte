@@ -21,16 +21,21 @@
 		</div>
 
 		{#each projects as project, index}
-			<div class="mt-24">
+			<div class="mt-40">
 				<Project {index} {...project} />
 			</div>
 		{/each}
 	</div>
 
-	<div class="mt-24 max-w-screen-xl mx-auto flex justify-center">
-		<a sveltekit:prefetch href="/projects" class="link-underline text-4xl"
-			>All projects<span class="pl-4 ">→</span></a
+	<div class="mt-40 max-w-screen-xl mx-auto flex justify-center">
+		<a
+			sveltekit:prefetch
+			href="/projects"
+			class="link-fill overflow-hidden hover:rounded text-4xl font-saira flex items-center"
 		>
+			<p>More Projects</p>
+			<span class="pl-4 pb-2">→</span>
+		</a>
 	</div>
 </section>
 <!-- <section id="projects" class="py-48 border-b-2 border-background-light">

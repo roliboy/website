@@ -12,7 +12,7 @@
 	</nav> -->
 	<div class="flex h-full items-center">
 		<div class="p-16">
-			<h1 class="text-6xl text-primary mb-4">icarus</h1>
+			<h1 class="text-6xl text-primary mb-4">shiba</h1>
 		</div>
 	</div>
 </header>
