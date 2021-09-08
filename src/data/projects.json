@@ -2,43 +2,21 @@
     {
         "id": 0,
         "name": "icarus",
-        "slug": "icarus",
+        "repository": "https://github.com/roliboy/icarus",
+        "website": "https://www.icarus-ctf.ml",
+        "slug": "projects/icarus",
+        "cover": "static/icarus.png",
         "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
         "tags": ["ctf", "arch linux"]
     },
     {
         "id": 1,
         "name": "shiba",
-        "slug": "shiba",
+        "repository": "https://github.com/roliboy/shiba",
+        "website": "",
+        "slug": "projects/shiba",
+        "cover": "static/shiba.png",
         "description": "All-in-one webapp prototyping companion. A versatile and easy-to-use tool that can act as a static HTTP server, CORS proxy, REST API and more",
         "tags": ["cli", "bash", "http", "rest"]
-    },
-    {
-        "id": 2,
-        "name": "website",
-        "slug": "website",
-        "description": "Personal website created using svelte and tailwind css",
-        "tags": ["svelte", "tailwind"]
-    },
-    {
-        "id": 3,
-        "name": "archer",
-        "slug": "archer",
-        "description": "Automated arch linux install script for brainlets",
-        "tags": ["bash", "arch linux"]
-    },
-    {
-        "id": 4,
-        "name": "raytracer",
-        "slug": "raytracer",
-        "description": "Simple ray tracer implemented in pure C following Peter Shirley's 'Ray Tracing in a Weekend' book, with some extra features like: realtime output, multithreaded rendering, scene loading and avx intrinsics",
-        "tags": ["c", "sdl"]
-    },
-    {
-        "id": 5,
-        "name": "ansify",
-        "slug": "ansify",
-        "description": "Image to ansi rgb escape sequence converter",
-        "tags": ["cli", "bash"]
     }
 ]
