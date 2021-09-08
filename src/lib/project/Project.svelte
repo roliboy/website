@@ -31,7 +31,7 @@
 				<a
 					sveltekit:prefetch
 					class="link-fill hover:rounded hover:overflow-hidden"
-					href="/projects/icarus"
+					href="/projects"
 				>
 					Read More
 					<span class="pl-4">→</span>
