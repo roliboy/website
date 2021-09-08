@@ -8,8 +8,8 @@
 		<nav class="absolute top-0 right-0 w-full flex justify-center md:justify-end">
 			<div class="pt-8 md:p-16 text-lg md:text-xl">
 				<a href="#projects" class="link-underline">Projects</a>
-				<a href="#about" class="link-underline md:ml-16">About</a>
-				<a href="#contact" class="link-underline md:ml-16">Contact</a>
+				<a href="#about" class="link-underline ml-8 md:ml-16">About</a>
+				<a href="#contact" class="link-underline ml-8 md:ml-16">Contact</a>
 			</div>
 		</nav>
 		<div class="flex justify-center md:justify-start md:pl-16 items-center h-full">
