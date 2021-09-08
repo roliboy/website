@@ -52,15 +52,14 @@
 			.map((shape) => makeShape());
 
 		// TODO: update when window resized
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
 
 		const context = canvas.getContext('2d');
 		context.lineWidth = 2;
-		context.strokeStyle = '#ffffff';
 
 		let animationFrameId: number;
 		const drawFrame = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
 			context.clearRect(0, 0, canvas.width, canvas.height);
 
 			shapes.forEach((shape) => {
