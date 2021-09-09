@@ -56,9 +56,6 @@
 <Footer />
 
 <style lang="postcss">
-	.half {
-		height: 50vh;
-	}
 	.heading {
 		@apply text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-6;
 	}
