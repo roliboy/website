@@ -5,7 +5,7 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import Project from '$lib/project/Project.svelte';
+	import ProjectItem from '$lib/project/ProjectItem.svelte';
 	import projects from '../data/projects.json';
 	import Shapes from '$lib/header/Shapes.svelte';
 </script>
@@ -14,7 +14,7 @@
 	<title>Home</title>
 </svelte:head>
 
-<Header height="h-screen">
+<Header>
 	<div slot="canvas"><Shapes /></div>
 	<div slot="title">roliboy</div>
 	<div slot="subtitle">1337 h4x0r, ctf player and certified brainlet</div>
@@ -33,7 +33,7 @@
 
 		{#each projects as project, index}
 			<div class="mt-40">
-				<Project {index} {...project} />
+				<ProjectItem {index} {...project} />
 			</div>
 		{/each}
 	</div>
