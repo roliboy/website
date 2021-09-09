@@ -5,7 +5,7 @@
         "repository": "https://github.com/roliboy/icarus",
         "website": "https://www.icarus-ctf.ml",
         "slug": "projects/icarus",
-        "cover": "static/icarus.png",
+        "cover": "icarus.png",
         "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
         "tags": ["ctf", "arch linux"]
     },
@@ -15,7 +15,7 @@
         "repository": "https://github.com/roliboy/shiba",
         "website": "",
         "slug": "projects/shiba",
-        "cover": "static/shiba.png",
+        "cover": "shiba.png",
         "description": "All-in-one webapp prototyping companion. A versatile and easy-to-use tool that can act as a static HTTP server, CORS proxy, REST API and more",
         "tags": ["cli", "bash", "http", "rest"]
     }
