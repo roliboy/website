@@ -44,8 +44,13 @@ html {
 	@apply py-32 border-b-2 border-background-light;
 }
 
+.content {
+	@apply container px-8 mx-auto;
+}
+
 .heading {
-	@apply text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-6;
+	@apply text-4xl md:text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-4 mb-8 md:mb-16;
+	@apply flex items-center flex-col md:items-start md:ml-32;
 }
 
 .link-underline {

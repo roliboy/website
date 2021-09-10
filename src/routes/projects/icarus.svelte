@@ -42,7 +42,7 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 
 <section id="description" class="section">
 	<div class="container px-8 mx-auto">
-		<h2 class="heading mb-16">Description</h2>
+		<h2 class="heading">Description</h2>
 		<div class="text-lg">
 			<p class="mb-2">
 				Icarus is an Arch Linux package repository aiming to satisfy all your CTF needs.
@@ -72,7 +72,7 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 </section>
 <section id="packages" class="section">
 	<div class="container px-8 mx-auto">
-		<h2 class="heading mb-16">Packages</h2>
+		<h2 class="heading">Packages</h2>
 
 		<div class="">
 			<table class="w-full">
@@ -106,7 +106,7 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 </section>
 <section id="setup" class="section">
 	<div class="container px-8 mx-auto">
-		<h2 class="heading mb-16">Setup</h2>
+		<h2 class="heading">Setup</h2>
 		<div class="text-lg">
 			<div class="mb-6">
 				<p class="mb-2">1. Add the repository to your pacman configuration</p>

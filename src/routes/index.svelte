@@ -25,20 +25,18 @@
 	</div>
 </Header>
 
-<section id="projects" class="py-48 border-b-2 border-background-light">
-	<div class="container px-8 mx-auto">
-		<div class="flex justify-center md:justify-start">
-			<h2 class="heading md:ml-32">Projects</h2>
-		</div>
+<section id="projects" class="section">
+	<div class="content">
+		<h2 class="heading">Projects</h2>
 
 		{#each projects as project, index}
-			<div class="mt-40">
+			<div class="mt-32 md:mt-48">
 				<ProjectItem {index} {...project} />
 			</div>
 		{/each}
 	</div>
 
-	<div class="mt-40 max-w-screen-xl mx-auto flex justify-center">
+	<div class="mt-32 md:mt-48 content flex justify-center">
 		<a
 			sveltekit:prefetch
 			href="/projects"
