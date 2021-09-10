@@ -30,7 +30,7 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 	<title>Projects</title>
 </svelte:head>
 
-<Header height="h-screen/2" showBack={false}>
+<Header height="h-screen/2">
 	<div slot="title">icarus</div>
 	<div slot="subtitle">Arch Linux repository for CTF players</div>
 	<div slot="links">

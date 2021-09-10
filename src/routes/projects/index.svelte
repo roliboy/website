@@ -13,15 +13,9 @@
 	<title>Projects</title>
 </svelte:head>
 
-<Header height="h-screen/2" showBack={true}>
-	<!-- <div slot="canvas"><Shapes /></div> -->
+<Header height="h-screen/2">
 	<div slot="title">projects</div>
 	<!-- <div slot="subtitle">1337 h4x0r, ctf player and certified brainlet</div> -->
-	<div slot="links">
-		<a href="#projects" class="link-underline">Projects</a>
-		<a href="#about" class="link-underline ml-8 md:ml-16">About</a>
-		<a href="#contact" class="link-underline ml-8 md:ml-16">Contact</a>
-	</div>
 </Header>
 
 <!-- TODO: search bar and filter by tags -->
