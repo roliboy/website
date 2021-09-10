@@ -1,30 +1,39 @@
 <script context="module" lang="ts">
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/header/Header.svelte';
+
 	export const prerender = true;
 </script>
 
-<header class="w-full half bg-header bg-center bg-no-repeat bg-cover">
-	<!-- <nav>
-		<div class="flex justify-end p-16 text-xl">
-			<a href="#projects" class="link-underline ml-16">Projects</a>
-			<a href="#about" class="link-underline ml-16">About</a>
-			<a href="#contact" class="link-underline ml-16">Contact</a>
-		</div>
-	</nav> -->
-	<div class="flex h-full items-center">
-		<div class="p-16">
-			<h1 class="text-6xl text-primary mb-4">shiba</h1>
+<Header height="h-screen/2">
+	<div slot="title">shiba</div>
+	<div slot="subtitle">descriptive description</div>
+	<!-- <div slot="links">
+		<a href="#description" class="link-underline">Description</a>
+		<a href="#packages" class="link-underline ml-4 md:ml-16">Packages</a>
+		<a href="#setup" class="link-underline ml-4 md:ml-16">Setup</a>
+	</div> -->
+</Header>
+
+<section id="description" class="section">
+	<div class="container px-8 mx-auto">
+		<h2 class="heading">Work in Progress</h2>
+		<div class="text-lg">
+			<p class="mb-2">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, reiciendis inventore! Beatae
+				quo aspernatur, enim harum corrupti culpa odio accusantium rerum officiis porro in ea
+				praesentium molestiae aut recusandae a.
+			</p>
+			<p class="mb-2">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam dolore aut voluptas
+				doloremque possimus distinctio? Iste vero id minima eligendi debitis explicabo sapiente
+				distinctio dicta magni blanditiis! Voluptate, odit eum!
+			</p>
 		</div>
 	</div>
-</header>
-<section id="projects" class="py-48 border-b-2 border-background-light">
-	<h2 class="heading ml-40">Work in Progress</h2>
 </section>
 
+<Footer />
+
 <style lang="postcss">
-	.half {
-		height: 50vh;
-	}
-	.heading {
-		@apply text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-6;
-	}
 </style>
