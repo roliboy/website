@@ -13,7 +13,7 @@
 	<slot name="canvas" />
 	<header class="w-full h-full bg-header bg-center bg-no-repeat bg-cover">
 		<nav class="absolute top-0 right-0 w-full flex justify-center md:justify-end">
-			<div class="pt-8 md:p-16 text-lg md:text-xl nav-links">
+			<div class="pt-8 md:p-16 text-md md:text-xl nav-links">
 				<slot name="links" />
 			</div>
 		</nav>
