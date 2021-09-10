@@ -13,7 +13,8 @@ module.exports = {
 				secondary: `#ff79c6`
 			},
 			fontFamily: {
-				saira: ['Saira', 'sans-serif']
+				saira: ['Saira', 'sans-serif'],
+				firacode: ['Fira Code', 'monospace']
 			},
 			backgroundImage: {
 				header: 'linear-gradient(rgba(40, 42, 54, 0.65), #282a36), url(/static/header.png)'

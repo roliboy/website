@@ -1,6 +1,6 @@
 /* Write your global styles here, in PostCSS syntax */
 
-@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira&family=Fira+Code:wght@400;700&display=swap');
 
 @tailwind base;
 
@@ -38,6 +38,14 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-primary;
+}
+
+.section {
+	@apply py-32 border-b-2 border-background-light;
+}
+
+.heading {
+	@apply text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-6;
 }
 
 .link-underline {

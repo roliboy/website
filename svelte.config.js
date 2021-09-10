@@ -5,14 +5,21 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess({
-        "postcss": true
-    })],
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	],
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		adapter: adapter()
+		adapter: adapter(),
+		vite: {
+			optimizeDeps: {
+				include: ['highlight.js/lib/core']
+			}
+		}
 	}
 };
 
