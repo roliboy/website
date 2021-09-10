@@ -1,13 +1,6 @@
 <script lang="ts">
 	export let index: number;
-	// export let id: number;
-	export let name: string;
-	export let repository: string;
-	export let website: string;
-	export let cover: string;
-	export let description: string;
-	export let slug: string;
-	export let tags: Array<string>;
+	export let project: Project;
 	$: reversed = index % 2 == 1;
 </script>
 
@@ -17,25 +10,25 @@
 	<div class="md:w-1/4 z-10 flex flex-col {reversed ? 'md:items-end' : 'md:items-start'}">
 		<div class="p-8 flex flex-col {reversed ? 'md:items-end' : 'md:items-start'}">
 			<span class="text-primary text-sm">featured project</span>
-			<h3 class="text-4xl">{name}</h3>
+			<h3 class="text-4xl">{project.name}</h3>
 		</div>
 		<div
 			class="rounded overflow-hidden shadow-lg bg-background-light p-4 {reversed
 				? 'md:-ml-40'
 				: 'md:-mr-40'}"
 		>
-			<p>{description}</p>
+			<p>{project.description}</p>
 		</div>
 		<div class="p-4 w-full">
 			<div class="flex flex-wrap {reversed ? 'justify-end' : 'justify-start'}">
-				{#each tags as tag}
+				{#each project.tags as tag}
 					<div class="m-1 py-1 px-2 rounded-lg text-primary border border-primary">
 						<div class="text-sm leading-none">{tag}</div>
 					</div>
 				{/each}
 			</div>
 			<div class="flex justify-around items-center mt-8">
-				<a href={repository} target="blank">
+				<a href={project.repository} target="blank">
 					<svg
 						class="w-8 fill-current text-foreground transition-all hover:scale-125"
 						xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +39,7 @@
 						/>
 					</svg>
 				</a>
-				<a href={website} class={website == '' ? 'hidden' : 'block'}>
+				<a href={project.website} target="blank" class={project.website == '' ? 'hidden' : 'block'}>
 					<svg
 						class="w-8 fill-current text-foreground transition-all hover:scale-125"
 						xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +50,7 @@
 						/>
 					</svg>
 				</a>
-				<a sveltekit:prefetch href={slug}>
+				<a sveltekit:prefetch href={project.slug}>
 					<svg
 						class="w-8 fill-current text-foreground transition-all hover:scale-125"
 						xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +65,7 @@
 		</div>
 	</div>
 	<div class="md:w-3/4">
-		<img alt="asd" class="mx-auto rounded w-full" src={cover} />
+		<img alt="asd" class="mx-auto rounded w-full" src={project.cover} />
 	</div>
 </div>
 

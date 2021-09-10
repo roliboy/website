@@ -1,6 +1,6 @@
 /// <reference types="@sveltejs/kit" />
 
-export interface Project {
+interface Project {
 	id: number;
 	name: string;
 	repository: string;

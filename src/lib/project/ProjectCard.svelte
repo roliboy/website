@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { Project } from 'src/global';
-
 	export let project: Project;
 </script>
 

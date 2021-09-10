@@ -31,7 +31,7 @@
 
 		{#each projects as project, index}
 			<div class="mt-32 md:mt-48">
-				<ProjectItem {index} {...project} />
+				<ProjectItem {index} {project} />
 			</div>
 		{/each}
 	</div>
