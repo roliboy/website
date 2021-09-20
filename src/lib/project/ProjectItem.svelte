@@ -65,7 +65,13 @@
 		</div>
 	</div>
 	<div class="md:w-3/4">
-		<img alt="asd" class="mx-auto rounded w-full" src={project.cover} />
+		<a sveltekit:prefetch href={project.slug}>
+			<img
+				alt="cover"
+				class="rounded w-full brightness-75 hover:brightness-100 transition-all"
+				src={project.cover}
+			/>
+		</a>
 	</div>
 </div>
 

@@ -5,12 +5,12 @@
 <a
 	sveltekit:prefetch
 	href={project.slug}
-	class="shadow rounded overflow-hidden cursor-pointer bg-background-light transition-all hover:shadow-2xl hover:scale-105"
+	class="shadow rounded overflow-hidden cursor-pointer bg-background-light transition-all hover:shadow-2xl hover:scale-105 card"
 >
 	<img
 		alt="cover"
 		src={project.cover}
-		class="w-full transform bg-center bg-cover brightness-75 hover:brightness-100 transition-all"
+		class="w-full transform bg-center bg-cover brightness-75 transition-all"
 	/>
 	<div class="p-4">
 		<p class="text-xl mb-2 text-primary">{project.name}</p>
@@ -28,4 +28,7 @@
 </a>
 
 <style lang="postcss">
+	.card:hover > img {
+		@apply brightness-100;
+	}
 </style>

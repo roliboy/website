@@ -5,7 +5,7 @@
         "repository": "https://github.com/roliboy/icarus",
         "website": "https://www.icarus-ctf.ml",
         "slug": "projects/icarus",
-        "cover": "icarus.png",
+        "cover": "/images/icarus/packages.png",
         "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
         "tags": ["ctf", "arch linux"]
     },
@@ -15,8 +15,18 @@
         "repository": "https://github.com/roliboy/shiba",
         "website": "",
         "slug": "projects/shiba",
-        "cover": "shiba.png",
+        "cover": "/shiba.png",
         "description": "All-in-one webapp prototyping companion. A versatile and easy-to-use tool that can act as a static HTTP server, CORS proxy, REST API and more",
         "tags": ["cli", "bash", "http", "rest"]
+    },
+    {
+        "id": 2,
+        "name": "archer",
+        "repository": "https://github.com/roliboy/archer",
+        "website": "",
+        "slug": "projects/archer",
+        "cover": "/images/archer/ping.png",
+        "description": "Automated Arch Linux install script with a simple core and a flexible configuration system that allows you to customize the installation process the way you want, from zero-interaction headless setups all the way to guided installers with automatic mirror ranking.",
+        "tags": ["arch linux", "bash"]
     }
 ]

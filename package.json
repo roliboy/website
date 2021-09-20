@@ -13,7 +13,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
-		"@types/cookie": "^0.4.0",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"autoprefixer": "^10.3.1",
@@ -34,7 +33,5 @@
 		"typescript": "^4.0.0"
 	},
 	"type": "module",
-	"dependencies": {
-		"cookie": "^0.4.1"
-	}
+	"dependencies": {}
 }

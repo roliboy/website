@@ -43,6 +43,18 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 <section id="description" class="section">
 	<div class="container px-8 mx-auto">
 		<h2 class="heading">Description</h2>
+		<!-- <div class="grid grid-flow-col gap-4 items-center">
+			<div class="col-span-6">
+				<img src="/images/icarus/homepage.png" />
+			</div>
+			<div class="col-span-4">
+				<p>
+					Icarus is an Arch Linux package repository aiming to satisfy all your CTF needs. Icarus is
+					an Arch Linux package repository aiming to satisfy all your CTF needs.
+				</p>
+				<p>gers</p>
+			</div>
+		</div> -->
 		<div class="text-lg">
 			<p class="mb-2">
 				Icarus is an Arch Linux package repository aiming to satisfy all your CTF needs.
