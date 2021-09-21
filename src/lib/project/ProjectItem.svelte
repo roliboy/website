@@ -68,7 +68,7 @@
 		<a sveltekit:prefetch href={project.slug}>
 			<img
 				alt="cover"
-				class="rounded w-full brightness-75 hover:brightness-100 transition-all"
+				class="rounded w-full brightness-75 hover:brightness-100 transition-all shadow-lg hover:shadow-2xl"
 				src={project.cover}
 			/>
 		</a>

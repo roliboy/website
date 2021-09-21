@@ -9,4 +9,5 @@ interface Project {
 	cover: string;
 	description: string;
 	tags: Array<string>;
+	featured: boolean;
 }

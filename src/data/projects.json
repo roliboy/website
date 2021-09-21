@@ -7,7 +7,8 @@
         "slug": "projects/icarus",
         "cover": "/images/icarus/packages.png",
         "description": "An Arch Linux repository for CTF players, containing packages that range from popular tools all the way to obscure utilities, mainly focused on binary reversing, pwn, steganography and forensics",
-        "tags": ["ctf", "arch linux"]
+        "tags": ["ctf", "arch linux", "docker"],
+        "featured": true
     },
     {
         "id": 1,
@@ -15,9 +16,10 @@
         "repository": "https://github.com/roliboy/shiba",
         "website": "",
         "slug": "projects/shiba",
-        "cover": "/shiba.png",
+        "cover": "/images/shiba/shiba.png",
         "description": "All-in-one webapp prototyping companion. A versatile and easy-to-use tool that can act as a static HTTP server, CORS proxy, REST API and more",
-        "tags": ["cli", "bash", "http", "rest"]
+        "tags": ["cli", "bash", "http", "rest"],
+        "featured": true
     },
     {
         "id": 2,
@@ -26,7 +28,52 @@
         "website": "",
         "slug": "projects/archer",
         "cover": "/images/archer/ping.png",
-        "description": "Automated Arch Linux install script with a simple core and a flexible configuration system that allows you to customize the installation process the way you want, from zero-interaction headless setups all the way to guided installers with automatic mirror ranking.",
-        "tags": ["arch linux", "bash"]
+        "description": "Automated Arch Linux install script with a simple core and a flexible configuration system that allows you to customize the installation process the way you want, from zero-interaction headless setups all the way to guided installers with automatic mirror ranking",
+        "tags": ["arch linux", "bash"],
+        "featured": true
+    },
+    {
+        "id": 3,
+        "name": "ansify",
+        "repository": "https://github.com/roliboy/ansify",
+        "website": "",
+        "slug": "projects/ansify",
+        "cover": "/images/ansify/ansify.png",
+        "description": "Convert any image into text using the unicode half block characters and ansi escape sequences to encode pixels",
+        "tags": ["cli", "bash", "image", "converter"],
+        "featured": false
+    },
+    {
+        "id": 4,
+        "name": "aurbash",
+        "repository": "https://github.com/roliboy/aurbash",
+        "website": "",
+        "slug": "projects/aurbash",
+        "cover": "/images/aurbash/aurbash.png",
+        "description": "Small bash script for searching, downloading and building packages from the arch user repository",
+        "tags": ["cli", "bash", "arch linux"],
+        "featured": false
+    },
+    {
+        "id": 5,
+        "name": "raytracer",
+        "repository": "https://github.com/roliboy/raytracer",
+        "website": "",
+        "slug": "projects/raytracer",
+        "cover": "/images/raytracer/book2.png",
+        "description": "Ray tracer written in C, following Peter Shirley's \"Ray Tracing in One Weekend\" book, with some extra features like real time output to window, multithreaded rendering and scene loading from files",
+        "tags": ["c", "avx", "ray tracer"],
+        "featured": true
+    },
+    {
+        "id": 6,
+        "name": "observer",
+        "repository": "https://github.com/roliboy/observer",
+        "website": "",
+        "slug": "projects/observer",
+        "cover": "/images/observer/timeline.png",
+        "description": "Application usage tracker with timeline and donut chart reports",
+        "tags": ["bash", "cli", "productivity"],
+        "featured": true
     }
 ]
