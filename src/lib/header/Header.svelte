@@ -11,7 +11,6 @@
 					<svg
 						class="w-10 h-10 fill-current text-foreground transition-all hover:text-primary"
 						viewBox="0 0 64 64"
-						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
 							d="m34.5297 1.8158 29.5132 17.0395-22.7674 13.1447 22.7674 13.1447-24.4538 14.1184v-5.8421l14.335-8.2763-14.335-8.2763v-9.7368l14.335-8.2763-14.335-8.2763v48.6842l-5.0594 2.9211zm-5.0594 0-29.5132 17.0395 22.7674 13.1447-22.7674 13.1447 5.0594 2.9211 19.3944-11.1974v-9.7368l-14.335-8.2763 14.335-8.2763v48.6842l5.0594 2.9211z"
@@ -19,7 +18,7 @@
 					</svg>
 				</a>
 			</div>
-			<div class="pt-8 md:p-8 text-md md:text-xl nav-links">
+			<div class="pt-8 md:p-8 text-md md:text-xl">
 				<slot name="links" />
 			</div>
 		</nav>

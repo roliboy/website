@@ -18,16 +18,18 @@
 	<div slot="title">icarus</div>
 	<div slot="subtitle">Arch Linux repository for CTF players</div>
 	<div slot="links">
-		<a href="#description" class="link-underline">Description</a>
-		<a href="#screenshots" class="link-underline ml-4 md:ml-16">Screenshots</a>
-		<a href="#setup" class="link-underline ml-4 md:ml-16">Setup</a>
+		<a href="#description" class="nav-link">Description</a>
+		<a href="#screenshots" class="nav-link">Screenshots</a>
+		<a href="#setup" class="nav-link">Setup</a>
 	</div>
 </Header>
 
 <section id="description" class="section">
-	<div class="container px-8 mx-auto">
+	<div class="content">
 		<h2 class="heading">Description</h2>
+	</div>
 
+	<div class="content">
 		<p class="mb-2">
 			Icarus is an Arch Linux package repository aiming to satisfy all your CTF needs.
 		</p>
@@ -67,33 +69,37 @@
 	</div>
 </section>
 <section id="screenshots" class="section">
-	<div class="container px-8 mx-auto">
+	<div class="content">
 		<h2 class="heading">Screenshots</h2>
+	</div>
 
-		<div>
-			<Screenshot>
-				<div slot="image">
-					<img alt="homepage screenshot" src="/images/icarus/homepage.png" />
-				</div>
-				<div slot="description">
-					Homepage containing some useful links, news and setup information
-				</div>
-			</Screenshot>
+	<div class="content">
+		<Screenshot>
+			<div slot="image">
+				<img alt="homepage screenshot" src="/images/icarus/homepage.png" />
+			</div>
+			<div slot="description">
+				Homepage containing some useful links, news and setup information
+			</div>
+		</Screenshot>
 
-			<Screenshot>
-				<div slot="image">
-					<img alt="management console screenshot" src="/images/icarus/packages.png" />
-				</div>
-				<div slot="description">
-					Management console displaying package list, package details, actions and build output
-				</div>
-			</Screenshot>
-		</div>
+		<Screenshot>
+			<div slot="image">
+				<img alt="management console screenshot" src="/images/icarus/packages.png" />
+			</div>
+			<div slot="description">
+				Management console displaying package list, package details, actions and build output
+			</div>
+		</Screenshot>
 	</div>
 </section>
+
 <section id="setup" class="section">
-	<div class="container px-8 mx-auto">
+	<div class="content">
 		<h2 class="heading">Setup</h2>
+	</div>
+
+	<div class="content">
 		<div class="text-lg">
 			<div class="mb-6">
 				<p class="mb-2">1. Add the repository to your pacman configuration</p>

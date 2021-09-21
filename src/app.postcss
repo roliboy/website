@@ -46,17 +46,34 @@ html {
 }
 
 .content {
-	@apply container px-8 mx-auto;
+	@apply container px-8 mx-auto mb-16 md:mb-32 last:mb-0;
 }
 
 .heading {
-	@apply text-4xl md:text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-4 mb-8 md:mb-16;
+	@apply text-4xl md:text-6xl text-primary after:block after:h-0.5 after:w-32 after:bg-secondary after:my-4;
 	@apply flex items-center flex-col md:items-start md:ml-32;
+}
+
+.nav-link {
+	@apply mr-8 md:mr-16 last:mr-0;
+
+	@apply relative;
+	@apply p-2;
+
+	@apply after:absolute;
+	@apply after:bottom-0 after:left-0 after:right-full after:h-4;
+	@apply after:bg-white;
+	@apply after:transition-all;
+
+	@apply hover:text-primary;
+
+	@apply hover:after:right-0 hover:after:h-1;
+	@apply hover:after:bg-primary;
 }
 
 .link-underline {
 	@apply relative;
-	@apply p-4;
+	@apply p-2;
 
 	@apply after:absolute;
 	@apply after:bottom-0 after:left-0 after:right-full after:h-4;

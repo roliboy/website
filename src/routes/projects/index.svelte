@@ -19,8 +19,8 @@
 </Header>
 
 <!-- TODO: search bar and filter by tags -->
-<section class="border-b-2 border-background-light">
-	<div class="container pt-40 pb-40 px-8 mx-auto">
+<section id="projects" class="section">
+	<div class="content">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
 			{#each projects as project}
 				<ProjectCard {project} />
