@@ -29,22 +29,22 @@
 	<div class="content">
 		<h2 class="heading">Projects</h2>
 
-		{#each projects as project, index}
-			<div class="mt-32 md:mt-48">
-				<ProjectItem {index} {project} />
-			</div>
-		{/each}
-	</div>
+		<div class="mb-32">
+			{#each projects.filter((project) => project.featured) as project}
+				<ProjectItem {project} />
+			{/each}
+		</div>
 
-	<div class="mt-32 md:mt-48 content flex justify-center">
-		<a
-			sveltekit:prefetch
-			href="/projects"
-			class="link-fill overflow-hidden hover:rounded text-4xl font-saira flex items-center"
-		>
-			<p>More Projects</p>
-			<span class="pl-4 pb-2">→</span>
-		</a>
+		<div class="flex justify-center">
+			<a
+				sveltekit:prefetch
+				href="/projects"
+				class="link-fill overflow-hidden hover:rounded text-4xl font-saira flex items-center"
+			>
+				<p>More Projects</p>
+				<span class="pl-4 pb-2">→</span>
+			</a>
+		</div>
 	</div>
 </section>
 <!-- <section id="projects" class="py-48 border-b-2 border-background-light">

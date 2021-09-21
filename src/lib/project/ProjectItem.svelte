@@ -1,26 +1,18 @@
 <script lang="ts">
-	export let index: number;
 	export let project: Project;
-	$: reversed = index % 2 == 1;
 </script>
 
-<div
-	class="w-full flex flex-col md:items-center {reversed ? 'md:flex-row-reverse' : 'md:flex-row'}"
->
-	<div class="md:w-1/4 z-10 flex flex-col {reversed ? 'md:items-end' : 'md:items-start'}">
-		<div class="p-8 flex flex-col {reversed ? 'md:items-end' : 'md:items-start'}">
+<div class="item w-full flex flex-col items-center mb-32 last:mb-0">
+	<div class="md:w-1/4 z-10 flex flex-col details">
+		<div class="p-8 flex flex-col title">
 			<span class="text-primary text-sm">featured project</span>
 			<h3 class="text-4xl">{project.name}</h3>
 		</div>
-		<div
-			class="rounded overflow-hidden shadow-lg bg-background-light p-4 {reversed
-				? 'md:-ml-40'
-				: 'md:-mr-40'}"
-		>
+		<div class="rounded overflow-hidden shadow-lg bg-background-light p-4 description">
 			<p>{project.description}</p>
 		</div>
 		<div class="p-4 w-full">
-			<div class="flex flex-wrap {reversed ? 'justify-end' : 'justify-start'}">
+			<div class="flex flex-wrap tags">
 				{#each project.tags as tag}
 					<div class="m-1 py-1 px-2 rounded-lg text-primary border border-primary">
 						<div class="text-sm leading-none">{tag}</div>
@@ -76,4 +68,43 @@
 </div>
 
 <style lang="postcss">
+	.item:nth-child(odd) {
+		@apply md:flex-row-reverse;
+
+		.details {
+			@apply md:items-end;
+		}
+
+		.title {
+			@apply md:items-end;
+		}
+
+		.description {
+			@apply md:-ml-40;
+		}
+
+		.tags {
+			@apply md:justify-end;
+		}
+	}
+
+	.item:nth-child(even) {
+		@apply md:flex-row;
+
+		.details {
+			@apply md:items-start;
+		}
+
+		.title {
+			@apply md:items-start;
+		}
+
+		.description {
+			@apply md:-mr-40;
+		}
+
+		.tags {
+			@apply md:justify-start;
+		}
+	}
 </style>

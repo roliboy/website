@@ -3,17 +3,11 @@
 </script>
 
 <script lang="ts">
-	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/header/Header.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import Screenshot from '$lib/Screenshot.svelte';
 	import Highlight from 'svelte-highlight';
 	import bash from 'svelte-highlight/src/languages/bash';
-
-	const step1 = `sed -i '$a [icarus]\\nServer = https://icarus-ctf.ml/$arch/$repo' /etc/pacman.conf`;
-	const step2 = `pacman-key --recv-keys 372F9386D1AF98A74146412B7EB1976EC359E844
-pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
-	const step3 = `pacman -Syy`;
-	const extra = `pacman -U https://icarus-ctf.ml/x86_64/icarus/python-pywhat-3.4.1-1-any.pkg.tar.zst`;
 </script>
 
 <svelte:head>
@@ -46,9 +40,10 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 		<p class="mb-2">
 			Most packages are built using PKGBUILDs from the Arch User Repository, some of which have been
 			modified, and even custom ones. The PKGBUILDs for all packages in the repository can be found
-			on <a href="#" class="text-primary">github</a>. Broken packages can be reported on the github
-			<a href="#" class="text-primary">issue tracker</a>. Contributions, suggestions and package
-			requests are also welcome.
+			on <a href="https://github.com/roliboy/icarus" class="text-primary">github</a>. Broken
+			packages can be reported on the github
+			<a href="https://github.com/roliboy/icarus/issues" class="text-primary">issue tracker</a>.
+			Contributions, suggestions and package requests are also welcome.
 		</p>
 		<p class="mb-2">
 			If you are ready to give it a go, head over to the
@@ -61,9 +56,9 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 
 		<p class="mb-2">
 			Besides the PKGBUILDs, this project also contains a tool called the
-			<a href="#" class="text-primary">management console</a>, which automates the package building,
-			signing and publishing. The management console can be accessed through a web interface which
-			connects to the build server via websocket.
+			<a href="https://www.icarus-ctf.ml/console" class="text-primary">management console</a>, which
+			automates the package building, signing and publishing. The management console can be accessed
+			through a web interface which connects to the build server via websocket.
 		</p>
 		<p class="mb-2">
 			The build server executes commands in a custom arch linux docker container, making the
@@ -102,15 +97,21 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 		<div class="text-lg">
 			<div class="mb-6">
 				<p class="mb-2">1. Add the repository to your pacman configuration</p>
-				<Highlight language={bash} code={step1} />
+				<Highlight
+					language={bash}
+					code={`sed -i '$a [icarus]\\nServer = https://icarus-ctf.ml/$arch/$repo' /etc/pacman.conf`}
+				/>
 			</div>
 			<div class="mb-6">
 				<p class="mb-2">2. Import and sign GPG key</p>
-				<Highlight language={bash} code={step2} />
+				<Highlight
+					language={bash}
+					code={`pacman-key --recv-keys 372F9386D1AF98A74146412B7EB1976EC359E844\npacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`}
+				/>
 			</div>
 			<div class="mb-6">
 				<p class="mb-2">3. Refresh package database</p>
-				<Highlight language={bash} code={step3} />
+				<Highlight language={bash} code={`pacman -Syy`} />
 			</div>
 			<div class="mb-6">
 				<p class="mb-2">
@@ -122,7 +123,10 @@ pacman-key --lsign-key 372F9386D1AF98A74146412B7EB1976EC359E844`;
 					Tip: You can install packages without modifying your pacman configuration, by using the
 					<code>-U</code> flag and the url of the desired package
 				</p>
-				<Highlight language={bash} code={extra} />
+				<Highlight
+					language={bash}
+					code={`pacman -U https://icarus-ctf.ml/x86_64/icarus/python-pywhat-3.4.1-1-any.pkg.tar.zst`}
+				/>
 			</div>
 		</div>
 	</div>

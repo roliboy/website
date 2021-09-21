@@ -74,6 +74,6 @@
         "cover": "/images/observer/timeline.png",
         "description": "Application usage tracker with timeline and donut chart reports",
         "tags": ["bash", "cli", "productivity"],
-        "featured": true
+        "featured": false
     }
 ]
