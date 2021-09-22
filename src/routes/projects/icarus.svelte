@@ -24,6 +24,7 @@
 	</div>
 </Header>
 
+<!-- TODO: refactor this -->
 <section id="description" class="section">
 	<div class="content">
 		<h2 class="heading">Description</h2>

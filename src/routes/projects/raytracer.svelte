@@ -6,6 +6,10 @@
 	export const prerender = true;
 </script>
 
+<svelte:head>
+	<title>raytracer</title>
+</svelte:head>
+
 <Header height="h-screen/2">
 	<div slot="title">raytracer</div>
 	<div slot="subtitle">Simple ray tracer written in C</div>
@@ -86,6 +90,8 @@
 		</Screenshot>
 	</div>
 </section>
+
+<!-- TODO: build instructions -->
 
 <Footer />
 

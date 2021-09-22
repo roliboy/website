@@ -49,6 +49,7 @@
 		</div>
 	</div>
 </section>
+<!-- TODO: about and contact section -->
 <!-- <section id="projects" class="section">
 	<div class="content">
 		<h2 class="heading">About</h2>

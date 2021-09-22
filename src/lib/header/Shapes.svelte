@@ -88,7 +88,6 @@
 		animationFrameId = requestAnimationFrame(drawFrame);
 
 		return () => {
-			console.log('unmounted');
 			cancelAnimationFrame(animationFrameId);
 		};
 	});
