@@ -9,6 +9,9 @@
 	}
 
 	interface Shape {
+		_scale: number;
+		_shape: string;
+
 		size: number;
 		position: Point;
 		velocity: Point;
@@ -48,12 +51,21 @@
 	const choice = <T extends unknown>(array: Array<T>): T =>
 		array.at(Math.floor(Math.random() * array.length));
 
-	const makeShape = (): Shape => {
-		const size = choice([0.03, 0.025, 0.02]) * Math.max(canvas.width, canvas.height);
+	const map = (n: number, start1: number, stop1: number, start2: number, stop2: number): number =>
+		((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+
+	const clamp = (n: number, start: number, end: number): number =>
+		n < start ? start : n > end ? end : n;
+
+	const makeShape = (width: number, height: number): Shape => {
+		const _scale = choice([0.03, 0.025, 0.02]);
+		const _shape = choice(['triangle', 'square']);
+
+		const size = _scale * Math.max(width, height);
 		const path = new Path2D(
-			Math.random() < 0.5 ? makeTrianglePath(size) : makeRoundedSquarePath(size)
+			_shape === 'triangle' ? makeTrianglePath(size) : makeRoundedSquarePath(size)
 		);
-		const position = { x: canvas.width * Math.random(), y: canvas.height * Math.random() };
+		const position = { x: width * Math.random(), y: height * Math.random() };
 		const velocity = {
 			x: (Math.random() - 0.5) * size * 0.004,
 			y: (Math.random() - 0.5) * size * 0.004
@@ -61,7 +73,24 @@
 		const rotation = Math.random() * Math.PI;
 		const rotationVelocity = ((Math.random() - 0.5) * Math.PI) / 360;
 		const color = Math.random() < 0.25 ? '#ff79c6' : '#bd93f9';
-		return { size, path, position, velocity, rotation, rotationVelocity, color };
+		return { _scale, _shape, size, path, position, velocity, rotation, rotationVelocity, color };
+	};
+
+	const updateShape = (
+		shape: Shape,
+		oldWidth: number,
+		oldHeight: number,
+		width: number,
+		height: number
+	): Shape => {
+		shape.position.x *= width / oldWidth;
+		shape.position.y *= height / oldHeight;
+		shape.size = shape._scale * Math.max(width, height);
+		shape.path = new Path2D(
+			shape._shape === 'triangle' ? makeTrianglePath(shape.size) : makeRoundedSquarePath(shape.size)
+		);
+
+		return shape;
 	};
 
 	onMount(() => {
@@ -70,10 +99,9 @@
 		canvas.width = canvas.getBoundingClientRect().width;
 		canvas.height = canvas.getBoundingClientRect().height;
 
-		// TODO: make this dynamic
-		let shapes: Array<Shape> = Array(32)
+		let shapes: Array<Shape> = Array(Math.floor(map(canvas.width, 360, 1920, 16, 32)))
 			.fill(null)
-			.map((_) => makeShape());
+			.map((_) => makeShape(canvas.width, canvas.height));
 
 		let animationFrameId: number;
 		const drawFrame = () => {
@@ -81,9 +109,13 @@
 				canvas.getBoundingClientRect().width != canvas.width ||
 				canvas.getBoundingClientRect().height != canvas.height
 			) {
-				canvas.width = canvas.getBoundingClientRect().width;
-				canvas.height = canvas.getBoundingClientRect().height;
-				//TODO: scale shape properties
+				const newWidth = canvas.getBoundingClientRect().width;
+				const newHeight = canvas.getBoundingClientRect().height;
+
+				shapes.map((shape) => updateShape(shape, canvas.width, canvas.height, newWidth, newHeight));
+
+				canvas.width = newWidth;
+				canvas.height = newHeight;
 			}
 
 			context.clearRect(0, 0, canvas.width, canvas.height);
@@ -104,9 +136,12 @@
 				context.rotate(shape.rotation);
 				context.strokeStyle = shape.color;
 				context.lineWidth = 2;
-				// TODO: map
-				context.globalAlpha =
-					(canvas.height - shape.position.y + shape.size) / (canvas.height + shape.size);
+				context.globalAlpha = clamp(
+					map(shape.position.y, 0, canvas.height - shape.size, 1, 0),
+					0,
+					1
+				);
+
 				context.stroke(shape.path);
 				context.restore();
 			});

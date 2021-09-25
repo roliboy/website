@@ -24,7 +24,7 @@
 		</nav>
 
 		<div class="flex justify-center md:justify-start md:pl-16 items-center h-full">
-			<div class="text-center md:text-left">
+			<div class="absolute text-center md:text-left">
 				<h1 class="text-5xl md:text-6xl text-primary mb-4">
 					<slot name="title" />
 				</h1>
